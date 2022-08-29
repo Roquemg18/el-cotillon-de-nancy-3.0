@@ -11,7 +11,7 @@
     display: grid;
 }
 .menu__arriba{ 
-    background-color: blueviolet;
+    background-color: #e44f9c;
     width: 100%;
     height: 40px; 
     font-size: 30px;      
@@ -39,13 +39,14 @@
 .menu__central{
     width: 100%;
     height: 140px;
-    background-color: #F212A6;
+    background-color: #ff69b4;
     display: block;
 
 }
 .titulo{
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
+    margin-top: 20px;
 }
 
 h1{
@@ -60,8 +61,12 @@ a{
 }
 
 .menu__navegacion__abajo{
-    background-color: #AD11E4 ;
+    background-color: #bd13ec ;
 
+}
+.menu__navegacion__abajo a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .menu__navegacion__abajo_ul{
@@ -82,7 +87,7 @@ a{
     text-align: center;
     display: inline-block;
     margin: 15px ;
-    margin-left: 600px;
+    margin-left: 460px;
     font-size: 30px;
 
 }
@@ -97,19 +102,25 @@ a{
 
 .menu__navegacion__abajo_ul-input{
     color: black;
-    margin-left: 50px;
     margin-top: 18px;
     margin-bottom: 15px;
+    border-radius: 0.5rem;
+    width: 200px;
+}
+.menu__navegacion__abajo_ul-input:hover{
+    font-size: medium;
 }
 
 
 .main{
     background-color:#ffffff ;
     width: 100%;
-    height: calc(300vh - 200px);
+    height: calc(250vh - 200px);
     display: flex;
     border-top: 50px;
     margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .section{
@@ -125,18 +136,19 @@ a{
 
 .conteiner__card{
     display: inline-block;
-    width: 15%;
-    background-color: aliceblue;
-    margin: 20px 100px 20px 150px ;
+    width: 18%;
+    background-color: white;
+    margin: 20px 80px 20px 150px ;
     height: 400px;
     padding: 5px;
-    border: solid 3px black;
+    border: solid 1px rgb(190, 189, 189);
     overflow: auto;
+    border-radius: 0.5rem;
 }
 .conteiner__card:hover {
     display: inline-block;
     width: 18%;
-    background-color: aliceblue;
+    background-color: white;
     margin: 20px 53px 20px 150px ;
     height: 400px;
     padding: 5px;
@@ -145,8 +157,9 @@ a{
 }
 
 .card__img{
-    width: auto;
+    width: 280px;
     height: 250px;
+    border-bottom:solid 1px black;
 }
 
 .card__img:hover {
@@ -166,28 +179,37 @@ a{
 }
 
 .aside{
-    background-image: linear-gradient(#F212A6,#AD11E4 ) ;
+    background-image: linear-gradient(#e64c9b,#ac3eca) ;
     width: 14%;
     height: 99%;
-    transform: skewY(7deg);
-    margin-top: 30px;
+    transform: skewY(5deg);
+    margin-top: 25px;
+    
 }
 .aside__conteiner{
     text-align: center;
     margin-top: 500px;
+    color: #ffffff;
+}
+.aside__conteiner h3{
+    font-size: 40px;
+}
+.aside__conteiner h4{
+    font-size: 35px;
 }
 
-.footer{
+
+.footer-1{
     border: 1px solid #e1e1e1;
     margin-top: 1rem;
     padding-top: 2rem;
     width: 100%;
     height: 250px;
-    background-color: #AD11E4;
+    background-color: #bd13ec;
 
 }
 
-.footer__contenedor-all{
+.footer__contenedor__all{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
@@ -205,6 +227,7 @@ a{
     font-size: 20px;
     margin: 10px;
     color:#000000;
+    text-decoration: none;
 }
 
 .footer-menu p{
@@ -219,12 +242,32 @@ a{
 /*responsive index*/
 
 @media only screen and (max-width:400px) {
+    .menu__arriba h3{
+        animation: descuento 3s infinite;  
+    }
+    
+    @keyframes descuento {
+        0%{
+            margin-left: 1px;
+        }
+        10%{
+            margin-left: 10px;
+        }
+        50%{margin-left: 80px;
+    
+        }
+        100%{
+            margin-left: 140px;
+        }
+    }
+    
     .menu{
         display: grid;
         grid-template-areas: 
         "menu__arriba"
         "menu__central"
         "menu__abajo";
+        padding: 0px;
     }
     .menu__arriba{
         grid-area: menu__arriba;
@@ -235,17 +278,32 @@ a{
     .menu__central{
         grid-area: menu__central;
         width: 100%;
-        height: 110px;
+        height: 130px;
+        padding-top: 0;
     }
     .titulo{
-        font-size: 40px;
+        font-size: 50px;
+        margin-left: 0px;
+        margin-top: 0px;
     }
-    .menu__abajo{
+    .menu__navegacion__abajo_ul-li{
+        display: none;
+    }
+    .menu__navegacion__abajo_ul-li2{
+        display: none;
+    }
+    .menu__navegacion__abajo_ul-li3{
+        display: none;
+    }
+    .menu__navegacion__abajo_ul-input{
+        display: none;
+    }
+    .menu__navegacion__abajo{
         grid-area: menu__abajo;
         width: 100%;
         height: 60px;
     }
-    .menu__abajo_ul{
+    .menu__navegacion__abajo_ul{
         display: none;
     }
 
@@ -276,7 +334,7 @@ a{
 
     .main{
         display: block;
-        height:calc(150vh - 200px) ;
+        height:calc(190vh - 200px) ;
 
     }
     .section{
@@ -311,13 +369,17 @@ a{
     .aside{
         display: none;
     }
-    .footer{
+    .footer-1{
         width: 100%;
-        height: 400px;
+        height: 450px;
+        padding: 10px;
+        background-color:#bd13ec ;
     }
-    .footer__contenedor-all{
+    .footer__contenedor__all{
         display: block;
         margin-left: 80px;
+
+
     }
     .footer__contenedor-all h3{
         font-size: 25px;
@@ -327,95 +389,87 @@ a{
         font-size: 15px;
     }
     .footer-menu p{
-        font-size: 15px;
+        font-size: 15px;    
     }
 }
 
 
 /*Pagina de registro*/
 
-.register__form{
-    display: grid;
-    /* grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(4,1fr);*/
-    gap: 10px;
-    grid-template-areas: 
-    "nombre nombre apellido apellido"
-    "email email email email"
-    "confirm-email confirm-email confirm-email confirm-email"
-    "hombre radio-hombre mujer radio-mujer"
-    "label-password label-password label-password label-password"
-    "password  password password  password"
-    "label-confirm-password label-confirm-password label-confirm-password label-confirm-password"
-    "confirm-password confirm-password confirm-password confirm-password"
-    ".  enviar enviar .";
-    margin: 10px;
-}
 .register__form__input{
-    margin: 5px;
-    background-color: #f5f5f5;
+    display: block;
+    width: 700px;
     height: 30px;
+    margin-left: 250px;
 
 }
-.nombre{
-    grid-area: nombre;
-    margin-left: 200px;
+.register__form__input-1 {
+    display: inline-block;
+    width: 275px;
+    height: 30px;
+    margin-left: 20px;
 }
-.apellido{
-    grid-area: apellido;
-    margin-right: 200px;
+
+.label-nombre{
+    margin-left: 250px;
+    width: 40px;
 }
-.email{
-    grid-area: email;
-    margin: 0px 200px;
+.label-apellido{
+    width: 40px;
 }
+.register__form input{
+    border-radius: 0.5rem;
+    border: solid 1px rgb(104, 103, 103);
+}
+
 .confirm-email{
-    grid-area: confirm-email;
-    margin: 0px 200px;
+    margin-bottom: 20px;
 }
+
 .hombre{
-    grid-area: hombre;
-    background-color: #ffffff;
-    margin-left:200px;
+    width: 60px;
+    display: inline-block;
+}
+
+.radio-hombre{
+    width: 670px;
+    display: inline-block;
+    margin-left: 30px;
 }
 .mujer{
-    grid-area: mujer;
-    background-color: #ffffff;
+    width: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
 }
-.label-password{
-    grid-area: label-password;
-    background-color: #ffffff;
-    margin-left: 200px;
-}
-.password{
-    grid-area: password;
-    margin: 0px 200px;
-}
-.label-confirm-password{
-    grid-area: label-confirm-password;
-    background-color: #ffffff;
-    margin-left: 200px;
-}
-.confirm-password{
-    grid-area: confirm-password;
-    margin: 0px 200px;
-}
-.enviar{
-    grid-area: enviar;
-    width: 100px;
-    margin-left: 42%;
-}
-.radio-hombre{
-    grid-area: radio-hombre;
-    border: 1px solid black;
 
-}
 .radio-mujer{
-    grid-area: radio-mujer;
-    margin-right: 100px;
-    
-
+    width: 275px;
+    display: inline-block;
+    margin-left: 270px;
 }
+.form__radio{
+    width: 100%;
+    box-sizing: border-box;
+    padding:0px 70px;
+}
+
+.password{
+    margin-bottom: 20px;
+}
+
+.label-confirm-password{
+    margin-bottom: 6px;
+}
+
+.confirm-password{
+    margin-bottom: 20px;
+}
+
+.enviar{
+    width: 200px;
+    margin-left: 500px;
+}
+
 
 .contenedor__registrarse{
     border: 1px solid black;
@@ -436,10 +490,19 @@ a{
 .main__register{
     background-color:#ffffff ;
     width: 100%;
-    height: calc(130vh - 600px);
+    height: calc(140vh - 600px);
     display: flex;
     border-top: 50px;
     margin-top: 50px;
+}
+
+.register__form{
+    height: 600px;
+    width: 80%;
+    margin-left: 180px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 18px;
 }
 
 .section__register{
@@ -463,151 +526,14 @@ a{
 
 /*pagian de registro reponsive*/
 @media only screen and (max-width:400px){
-    .menu{
-        display: grid;
-        grid-template-areas: 
-        "menu__arriba"
-        "menu__central"
-        "menu__abajo";
-    }
-    .menu__arriba{
-        grid-area: menu__arriba;
-        width: 100%;
-        height: 30px;
-        font-size: 20px;
-    }
-    .menu__central{
-        grid-area: menu__central;
-        width: 100%;
-        height: 110px;
-    }
-    .titulo{
-        font-size: 40px;
-    }
-    .menu__abajo{
-        grid-area: menu__abajo;
-        width: 100%;
-        height: 60px;
-    }
-    .menu__abajo_ul{
-        display: none;
-    }
 
-    .menu__abajo__responsive__ul{
-        display: block;
-        width: 80%;
-    }
-    .nav__responsive-buttom{
-        display: block;
-        font-size: 40px;
-        margin: 5px;
-    }
-    .carrito__responsive{
-        display: block;
-        float:right;
-        margin-bottom: 30px;
-        font-size: 20px;
-    }
-
-    .nav__responsive-buttom li{
-        float:left;
-    }
-    .nav__responsive__conteiner{
-        display: none;
-        position: absolute;
-        min-width: 150px;
-    }
-
-    .register__form{
-        display: grid;
-        gap: 10px;
-        grid-template-areas: 
-    "nombre nombre nombre nombre "
-    "apellido apellido apellido apellido"
-    "email email email email"
-    "confirm-email confirm-email confirm-email confirm-email"
-    "hombre hombre radio-hombre radio-hombre"
-    "mujer mujer radio-mujer radio-mujer"
-    "label-password label-password label-password label-password"
-    "password  password password  password"
-    "label-confirm-password label-confirm-password label-confirm-password label-confirm-password"
-    "confirm-password confirm-password confirm-password confirm-password"
-    ". enviar . .";
-    }
-    .register__form__input{
-        margin: 5px;
-        background-color: #f5f5f5;
-        height: 30px;
-        width: 300px;
-    
-    }
-    .nombre{
-        grid-area: nombre;
-
-    }
-    .apellido{
-        grid-area: apellido;
-
-    }
-    .email{
-        grid-area: email;
-
-    }
-    .confirm-email{
-        grid-area: confirm-email;
-
-    }
-    .hombre{
-        grid-area: hombre;
-        background-color: #ffffff;
-        width: 150px;
-
-    }
-    .mujer{
-        grid-area: mujer;
-        background-color: #ffffff;
-        width: 150px;
-    }
-    .label-password{
-        grid-area: label-password;
-        background-color: #ffffff;
-
-    }
-    .password{
-        grid-area: password;
-
-    }
-    .label-confirm-password{
-        grid-area: label-confirm-password;
-        background-color: #ffffff;
-    }
-    .confirm-password{
-        grid-area: confirm-password;
-
-    }
-    .enviar{
-        grid-area: enviar;
-        width: 100px;
-    }
-    .radio-hombre{
-        grid-area: radio-hombre;
-        border: 1px solid black;
-        width: 150px;
-    
-    }
-    .radio-mujer{
-        grid-area: radio-mujer;
-        width: 150px;
-        }
-    
     .contenedor__registrarse{
         border: 1px solid black;
         height: 70px;
-        width: 250px;
-        margin: 40px 40px 40px 400px;
+        width: 300px;
+        margin: 40px 60px 40px 30px;
         background-color: #fd5b99;
-        margin: 0px;
-        margin: 40px;
+        border-radius: 0.5rem;
     }
     
     .registrarse{
@@ -620,7 +546,7 @@ a{
     
     .main__register{
         background-color:#ffffff ;
-        width: 100%;
+        width: 390px;
         height: calc(160vh - 600px);
         display: flex;
         border-top: 50px;
@@ -629,33 +555,109 @@ a{
     
     .section__register{
         background-color: #ffffff;
-        width: 84%;
+        width: 100%;
         height: 100%;
-        margin-right: 10px;
     }
 
     .aside__register{
         display: none;
     }
-    .footer{
+
+    .register__form{
+        height: 600px;
         width: 100%;
-        height: 400px;
+        margin-left: 0px;
+        box-sizing: border-box;
+        padding: 5px;
+        font-size: 18px;
     }
-    .footer__contenedor-all{
+    .register__form input{
+        border-radius: 0.5rem;
+        border: solid 1px rgb(104, 103, 103);
+        margin-left: 20px;
+    }
+    .register__form__input{
         display: block;
-        margin-left: 80px;
+        width: 305px;
+        height: 30px;
+        margin-left: 20px;
     }
-    .footer__contenedor-all h3{
-        font-size: 25px;
+    .register__form__input-1 {
+        display: inline-block;
+        width: 240px;
+        height: 30px;
+        margin-left: 0px;
     }
     
-    .footer-menu a{
-        font-size: 15px;
-    }
-    .footer-menu p{
-        font-size: 15px;
+    .label-nombre{
+        margin-left: 20px;
+        width: 40px;
+        margin-left: 0px;
     }
 
+    .label-apellido{
+        width: 40px;
+    }
+    
+    .confirm-email{
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+    
+    .hombre{
+        width: 90px;
+        display: inline-block;
+        margin-left: 0px;
+    }
+    
+    .radio-hombre{
+        width: 200px;
+        display: inline-block;
+        margin-left: 0px;
+    }
+    .mujer{
+        width: 20px;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 120px;
+    }
+    
+    .radio-mujer{
+        width: 105px;
+        display: inline-block;
+        margin-left: 160px;
+    }
+
+    .form__radio{
+        width: 100%;
+        box-sizing: border-box;
+        padding:0px 70px;
+        margin-left: 0px;
+    }
+    
+    .password{
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+    
+    .label-confirm-password{
+        margin-bottom: 6px;
+        margin-left: 0px;
+    }
+    
+    .confirm-password{
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    .register__form label{
+        margin-left: 20px;
+    }    
+    .enviar{
+        width: 200px;
+        margin-left: 200px;
+    }
 }
 
 /*iniciar secion*/
@@ -673,60 +675,118 @@ a{
     height: 100%;
     margin-right: 10px;
 }
-.login__cointeiner{
-    display: grid;
-    grid-template-areas: 
-    "label-mail"
-    "mail"
-    "label-password2"
-    "password2"
-    "enviar";
-    margin-left: 5px;
-    padding-top: 0px;
+.section__login__responsive{
+    display: none;
 }
-
-.label-mail{
-    grid-area: label-mail;
-    margin-left: 400px;
-    font-size: 20px;
-}
-.mail{
-    grid-area: mail;
-    width: 800px;
-    height: 30px;
-    margin:auto;
-    margin-bottom:30px ;
-    
-
-}
-.label-password2{
-    grid-area: label-password2;
-    margin-left:400px;
-    font-size: 20px;
-}
-.password2{
-    grid-area: password2;
-    width: 800px;
-    height: 30px;
-    margin:auto;
-    margin-bottom: 30px;
-}
-.enviar{
-    grid-area: enviar;
-    margin:auto;
+.form__login__responsive{
+    display: none;
 }
 
 .aside__conteiner-login{
     text-align: center;
     margin-top: 180px;
 }
+.contenedor__registrarse__responsive{
+    display: none;
+}
+@media only screen and (max-width:400px){
+    .main__login{
+        background-color:#ffffff ;
+        width: 100%;
+        height: calc(140vh - 650px);
+        font-weight: 500;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-top: 50px;
+        margin-top: 50px;
+    }
+    .section__login{
+        display: none;
+    }
+    .aside__register{
+        display: none;
+    }
+    
+
+    .contenedor__registrarse__responsive{
+        border: 1px solid black;
+        height: 70px;
+        width: 300px;
+        background-color: #fd5b99;
+        margin-left: 50px;
+        padding-top: 15px;
+        display: block;
+
+    }
+
+    .registrarse__responsive{
+        text-align: center;
+        align-items: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .form__login__responsive{
+        display: block;
+        width: 24rem;
+        padding: 2rem;
+    
+    }
+
+    .form__login__responsive div{
+        position: relative;
+        height: 3rem;
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+    }
+
+    .form__login__responsive input{
+        width: 16rem;
+        height: 100%;
+        border: 2px solid rgb(190, 189, 189);
+        border-radius: 00.5rem;
+        font-family: inherit;
+        font-weight: inherit;
+        color:inherit ;
+        outline: none;
+        padding: 1.25rem;
+        background: none;
+        margin-bottom: 1rem;
+    }
+    .form__login__responsive input:hover{
+        border-color: blue;
+    }
+    .form__login__responsive input:focus{
+        border-color: rgb(1, 1, 110);
+    }
+    .login__form__label{
+        position: relative;
+        
+    }
+
+    .form__login__responsive button{
+        display: block;
+        margin-left: auto;
+        margin-top: 60px;
+        padding: 0.75rem 2rem;
+        background-color: #ac3eca;
+        font-family: inherit;
+        font-weight: inherit;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: background-color 200ms ease-in;
+    }
+    .form__login__responsive button:hover{
+        background-color:#7e2e94 ;
+    }
+}
 
 
 /*Carrito*/
 
-.contenedor__carrito{
-    background-color: #ffffff;   
-}
 .carrito__ul{
     height: 70px;
     width: 80%;
@@ -763,6 +823,7 @@ a{
     height: 80px;
     width: 95%;
     margin: 10px 10px 5px 40px;
+    background-color: #ffffff; 
 }
 .div__carrito{
     grid-area: div__carrito;
@@ -839,6 +900,113 @@ width: 400px;
     font-size: 50px;
     padding-left:20px;
 }
+
+/*Carrito reponsive*/
+
+@media only screen and (max-width:400px){
+    .main__carrito{
+        background-color:#ffffff ;
+        width: 390px;
+        height: calc(170vh - 250px);
+        display: flex;
+        border-top: 50px;
+        margin-top: 50px;
+    }
+
+    .carrito__ul{
+        height: 70px;
+        width: 80%;
+    }
+    
+    .carrito__ul-li{
+        display: inline-block;
+        color: black;
+        background-color: #f5f5f5;
+        margin: 5px;
+        height: 40px;
+        width: 80px;
+        font-size: 20px;
+        padding: 5px;
+        margin-right: 5px;
+    }
+    
+    .section__carrito{
+        display: grid;
+        grid-template-areas:
+        "titulo__carrtio titulo_carrito titulo_carrito"
+        "nav__carrito nav__carrito nav__carrito "
+        "div__carrito div__carrito div__carrito"
+        "div__carrito div__carrito div__carrito"
+        "div__carrito div__carrito div__carrito" 
+        "form__carrito form__carrito form__carrito";
+        width: 390px;
+        height: 100%;
+    
+    }
+    
+    .nav__carrito{
+        grid-area: nav__carrito;
+        height: 80px;
+        width: 95%;
+        margin: 10px 10px 5px 10px;
+        background-color: #ffffff; 
+    }
+    .div__carrito{
+        grid-area: div__carrito;
+        height: 350px;
+        width: 350px;
+        background-color: white;
+        margin: 5px;
+        border-bottom: 3px solid black;
+    }
+    .form__carrito{
+        grid-area: form__carrito;
+        height:580px;
+        width: 350px;
+        background-color:#ffffff;
+        margin-left: 5px;
+    }
+    
+    .form__carrito{
+        display: block;
+        width: 390px;
+    }
+    
+    .form__h3__carrito{
+    font-size: 40px;
+    width: 350px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    }
+
+    .form__carrito h4{
+        font-size: 35px;
+        width: 110px;
+        height: 120px;
+        margin-left: 70px;
+    }
+    
+    .form__button__carrito{
+        margin: 5px;
+        margin-left: 30px;
+        width: 320px;
+        height: 80px;
+        display: block;
+        border-radius: 0.5rem;
+    }
+    
+    .titulo__carrito{
+        background-color: white;
+        height: 70px;
+        width: 500px;
+        margin: 10px 10px 0px 50px;
+        font-size: 50px;
+        padding-left:20px;
+    }
+
+}
+
+
 
 /*Productos*/
 
@@ -987,8 +1155,19 @@ width: 400px;
     width: 800px;
     height: 150px;
     margin: 10px;
-    margin-left: 400px;
+    margin-left: 380px;
 }
+.preguntasFrecuentes{
+    grid-area: preguntasFrecuentes;
+    background-color: #FFFFFF;
+    width: 800px;
+    height: 100px;
+    margin: 10px;
+    margin-top: 60px;
+    margin-left: 360px;
+    margin-bottom: 50px;
+}
+
 .aside__nosotros{
     background-color: #F212A6;
     width: 14%;
@@ -1006,3 +1185,179 @@ width: 400px;
     margin-left: 250px;
     margin-bottom: 20px;
 }
+.preguntasFrecuentes h2{
+    font-size: 33px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width:400px) {
+    .aside__nosotros{
+        display: none;
+    }
+
+    .main__nosotros{
+        height: calc(140vh - 150px);
+        width: 100%;
+        display: flex;
+        border-top: 0px;
+        margin-top: 0px;
+    }
+    .titulo__nosotros{
+        font-size: 42px;
+        width: 360px;
+        margin-left: 15px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .section__nosotros{
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        "QuienesSomos QuienesSomos"
+        "ComoTrabajamos ComoTrabajamos"
+        "preguntasFrecuentes preguntasFrecuentes"
+        ;
+    }
+    
+    .QuienesSomos{
+        grid-area: QuienesSomos;
+        background-color: #FFFFFF;
+        width: 330px;
+        height: 200px;
+        margin: 10px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    .ComoTrabajamos{
+        grid-area: ComoTrabajamos;
+        background-color: #FFFFFF;
+        width: 330px;
+        height: 350px;
+        margin: 10px;
+        margin-left: 30px;
+    }
+    .preguntasFrecuentes{
+        grid-area: preguntasFrecuentes;
+        background-color: #FFFFFF;
+        width: 330px;
+        height: 200px;
+        margin: 10px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .QuienesSomos h2{
+        font-size: 33px;
+        margin-left: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .ComoTrabajamos h2{
+        font-size: 33px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .preguntasFrecuentes h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    
+}
+/* prueba
+.body{
+    background-color: #e6e6e6;
+}
+
+header{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav{
+    background-color:#528fd5;
+    margin-top: 20px;
+    position: relative;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav > ul >li {
+    float: left;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+
+}
+nav ul li a:hover {
+    background-color: #3669a3;
+    color: #fff;
+    
+}
+
+nav > ul > li:hover div {
+    display: table;
+
+}
+
+submenu
+
+nav ul li div{
+    width: 1000px;
+    position: absolute;
+    left: 0;
+    background-color: #ccc;
+    box-sizing: border-box;
+    display: none;
+
+}
+nav ul li div ul{
+    width: 20%;
+    display: table-cell;
+    border-right: 1px solid rgba(255,255,555.5);
+    box-sizing: border-box;
+
+}
+
+nav ul li div ul:last-child{
+    border: none;
+}
+nav ul li div ul .titulo-1 {
+    background-color: #000000;
+    color: white;
+}
+nav ul li div ul .titulo-1 a{
+    color: white;
+    padding: 10px 20px;
+}
+.titulo-1.azul{background-color: #3498db;}
+.titulo-1.verde{background: #27ae60;}
+.titulo-1.naranja{background: orange;}
+.titulo-1.rojo{background: red;}
+
+nav ul li div ul .titulo-1 a:hover{
+    background: none;
+}
+
+nav ul li div ul li a {
+    color: #000000;
+}
+
+nav ul li div ul li a:hover{
+    color: white;
+}
+*/

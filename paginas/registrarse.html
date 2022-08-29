@@ -14,20 +14,20 @@
 <body>
     <header>
         <div class="menu">
-            <div class="menu__arriba">publicidad variada</div>
+            <div class="menu__arriba"><h3>10% de descuento en globos</h3></div>
             <div class="menu__central">
                 <h1 class="titulo">El cotillon de nancy</h1>
             </div>
-            <nav class="menu__abajo">
-                <ul class="menu__abajo_ul">
-                    <li class="menu__abajo_ul-li"><a href="./../index.html">Inicio</a></li>
-                    <li class="menu__abajo_ul-li"><a href="./productos.html">Productos</a></li>
-                    <li class="menu__abajo_ul-li"><a href="./venta_por_mayor.html">Venta por Mayor</a></li>
-                    <li class="menu__abajo_ul-li"><a href="./nosotros.html">Nosotros</a></li>
-                    <li class="menu__abajo_ul-li2"><a href="./registrarse.html">Registrate</a></li>
-                    <li class="menu__abajo_ul-li3"><a href="./iniciar_secion.html">Inicia secion</a></li>
-                    <li class="menu__abajo_ul-li3"><a href="./carrito.html">Carrito</a></li>
-                    <input class="menu__abajo_ul-input" type="search" name="buscador" id="">
+            <nav class="menu__navegacion__abajo">
+                <ul class="menu__navegacion__abajo_ul">
+                    <li class="menu__navegacion__abajo_ul-li"><a href="./../index.html">Inicio</a></li>
+                    <li class="menu__navegacion__abajo_ul-li"><a href="./../paginas/productos.html">Productos</a></li>
+                    <li class="menu__navegacion__abajo_ul-li"><a href="./../paginas/venta_por_mayor.html">Venta por Mayor</a></li>
+                    <li class="menu__navegacion__abajo_ul-li"><a href="./../paginas/nosotros.html">Nosotros</a></li>
+                    <li class="menu__navegacion__abajo_ul-li2"><a href="#">Registrate</a></li>
+                    <li class="menu__navegacion__abajo_ul-li3"><a href="./../paginas/iniciar_secion.html">Inicia secion</a></li>
+                    <li class="menu__navegacion__abajo_ul-li3"><a href="./../paginas/carrito.html">Carrito</a></li>
+                    <input class="menu__navegacion__abajo_ul-input" type="search" name="buscador" id="">
                 </ul>
                 <ul class="menu__abajo__responsive__ul">
                     <div class="nav__responsive-buttom fas fa-bars">
@@ -47,7 +47,8 @@
                     </div>
                 </div>
             </div>
-            </nav>
+        </ul>
+        </nav>
         </div>
     </header>
     <main class="main__register">
@@ -56,19 +57,33 @@
                 <h2 class="registrarse">Registrarse</h2>
             </div>
             <form class="register__form">
-                <input class="register__form__input nombre" type="text" value="nombre">
-                <input class="register__form__input apellido" type="text" value="Apellido">
-                <input class="register__form__input email" type="email" name="correo" id="" value="correo">
-                <input class="register__form__input confirm-email" type="email" name="confirmar_Correo" id="" value="confirmar correo">
+                <div>
+                    <label class="register__form__input-1 label-nombre" for="nombre">Nombre</label>
+                    <input class="register__form__input-1 nombre" type="text">
+                    <label class="register__form__input-1 label-apellido" for="apellido">Apellido</label>
+                    <input class="register__form__input-1 apellido" type="text">
+                </div>
+                <div>
+                <label class="register__form__input label-correo" for="mail">Correo</label>
+                <input class="register__form__input email" type="email" name="correo" required="">
+                </div>
+                <label class="register__form__input label-password" for="contraseña">contraseña</label>
+                <input class="register__form__input confirm-email" type="email" name="confirmar_Correo" required="">
+                
                 <label class="register__form__input hombre" for="hombre">Hombre</label>
                 <input class="register__form__input radio-hombre" type="radio" name="hombre" id="">
+
                 <label class="register__form__input mujer" for="mujer">Mujer</label>
                 <input class="register__form__input radio-mujer" type="radio" name="mujer" id="">
+                
                 <label class="register__form__input label-password" for="contraseña">contraseña</label>
-                <input class="register__form__input password" type="password" name="password" id="" >
+                <input class="register__form__input password" type="password" name="password" required="" >
+
                 <label class="register__form__input label-confirm-password" for="confirmar-contraseña">confirmar contraseña</label>
-                <input class="register__form__input confirm-password" type="password" name="password" id="">
+                <input class="register__form__input confirm-password" type="password" name="password" required="">
+
                 <input class="register__form__input enviar" type="submit" value="enviar">
+                
             </form>
         </section>
         <aside class="aside__register">
@@ -81,9 +96,8 @@
         </aside> 
     </main>
 
-
-    <footer class="footer">
-        <div class="footer__contenedor-all">
+    <footer class="footer-1">
+        <div class="footer__contenedor__all">
             <div>
                 <h3>Acerca de nosotros</h3>
                 <nav class="footer-menu">
@@ -109,6 +123,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 
