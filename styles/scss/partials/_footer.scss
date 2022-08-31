@@ -1,0 +1,33 @@
+.footer-1{
+    border: 1px solid #e1e1e1;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #bd13ec; }
+
+    .footer__contenedor__all{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .footer__contenedor-all h3{
+            margin-bottom: 0.5rem;
+            font-size: 25px;
+            color: #ffff;
+        
+        .footer-menu p{
+            display: block;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .footer-menu a{
+            display: block;
+            font-size: 20px;
+            margin: 10px;
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+}
