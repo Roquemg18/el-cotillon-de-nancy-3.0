@@ -977,23 +977,38 @@ a {
   border-top: 50px;
   margin-top: 50px;
   display: grid;
-  grid-template-areas: "menu__productos section__productos section__productos section__productos section__productos aside__productos";
+  grid-template-areas:
+  "menu__productos section__productos section__productos section__productos section__productos aside__productos";
+
 }
 
 .menu__productos {
   grid-area: menu__productos;
   background-color: #ace411;
   width: 250px;
-  height: 100%;
+  height: 700px;
 }
 
 .section__productos {
   grid-area: section__productos;
-  background-color: #3123ac;
-  width: 1500px;
+  background-color: #ffffff;
+  width: 1400px;
   height: 100%;
   margin-right: 5px;
 }
+
+.card__producto{
+  display: inline-block;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 40px 10px 90px;
+  height: 400px;
+  padding: 5px;
+  border: solid 1px rgb(190, 189, 189);
+  overflow: auto;
+  border-radius: 0.5rem;
+}
+
 
 .aside__productos {
   grid-area: aside__productos;
