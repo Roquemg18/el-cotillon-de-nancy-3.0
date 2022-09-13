@@ -8,7 +8,7 @@
     <title>El cotillon de nancy - Inicia-secion</title>
     <meta name="description" content="Inicia Secion para disfruta de todos los Descuentos y beneficios de ser socio">
     <meta name="keywords" content="cumpleaños, fiestas, boda, disfraces, descartables, cotillon, reposteria, mayorista, minorista">
-    <link rel="stylesheet" href="./../styles/scss/styles-scss.css">
+    <link rel="stylesheet" href="./../styles/styles-scss.css">
     <link rel="stylesheet" href="./../styles/normalize.css">
     <script src="https://kit.fontawesome.com/736909225a.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,32 +23,20 @@
             <div class="menu__central">
                 <h1 class="titulo">El cotillon de nancy</h1>
             </div>
-            <nav class="menu__navegacion__abajo">
-                <ul class="menu__navegacion__abajo_ul">
-                    <li class="menu__navegacion__abajo_ul-li"><a href="./../index.html">Inicio</a></li>
-                    <li class="menu__navegacion__abajo_ul-li"><a href="./productos.html">Productos</a></li>
-                    <li class="menu__navegacion__abajo_ul-li"><a href="./venta_por_mayor.html">Venta por Mayor</a></li>
-                    <li class="menu__navegacion__abajo_ul-li"><a href="./nosotros.html">Nosotros</a></li>
-                    <li class="menu__navegacion__abajo_ul-li2"><a href="./registrarse.html">Registrate</a></li>
-                    <li class="menu__navegacion__abajo_ul-li3"><a href="./iniciar_secion.html">Inicia secion</a></li>
-                    <li class="menu__navegacion__abajo_ul-li3"><a href="./carrito.html">Carrito</a></li>
-                    <input class="menu__navegacion__abajo_ul-input" type="search" name="buscador" id="">
-                </ul>
-                <ul class="menu__abajo__responsive__ul">
-                    <div class="nav__responsive-buttom fas fa-bars">
-                        <div class="nav__responsive__conteiner">
-                            <li class="menu__abajo__responsive__li"><a href="#">Inicio</a></li>
-                            <li class="menu__abajo___responsive__li"><a href="./productos.html">Productos</a></li>
-                            <li class="menu__abajo___responsive__li"><a href="./venta_por_mayor.html">Venta por Mayor</a></li>
-                            <li class="menu__abajo__responsive__li"><a href="./nosotros.html">Nosotros</a></li>
-                            <li class="menu__abajo___responsive__li2"><a href="./registrarse.html">Registrate</a></li>
-                            <li class="menu__abajo___responsive__li3"><a href="./iniciar_secion.html">Inicia secion</a></li>
-                            <input class="menu__abajo___responsive__input" type="search" name="buscador" id="">
-                        </div>
-                    </div>
-                    <div class="carrito__responsive ">
-                        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
+            <nav class="menu__nav">
+                <input type="checkbox" name="" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                    <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <ul>
+                    <li><a href="./../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">productos</a></li>
+                    <li><a href="./nosotros.html">nosotros</a></li>
+                    <li><a href="./carrito.html">carrito</a></li>
+                    <li><a href="#" class="nav__login">inicio secion</a></li>
+                    <li><a href="./registrarse.html">registrarse</a></li>
+                    <input type="search"  id="buscador">
                 </ul>
             </nav>
         </div>
@@ -96,7 +84,7 @@
                     
                 </div>
                 <div class="form__login_conteiner">
-                    <label for="password" class="login__form__label">Contrasenia</label> 
+                    <label for="password" class="login__form__label">Clave</label> 
                     <input type="password" class="login__form__input" id="password" placeholder="" autocomplete="off">  
                     
                 </div>
@@ -105,9 +93,9 @@
         <aside class="aside__register">
             <div class="aside__conteiner-login">
                 <h3>Redes</h3>
-                <h4>Instagram</h4>
-                <h4>Facebook</h4>
-                <h4>Twitter</h4>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
             </div>
         </aside>
     </main>
@@ -131,9 +119,9 @@
             <div>
                 <h3>Redes</h3>
                 <nav class="footer-menu">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i> facebook</a>
+                    <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i> whatsapp</a>
                 </nav>
             </div>
         </div>

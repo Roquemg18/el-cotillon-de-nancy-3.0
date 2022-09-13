@@ -2,6 +2,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 .menu {
@@ -74,57 +76,123 @@ a {
   color: #ffffff;
 }
 
-.menu__navegacion__abajo {
+.menu__nav {
   background-color: #bd13ec;
+  height: 80px;
+  width: 100%;
 }
-
-.menu__navegacion__abajo a {
-  color: #ffffff;
+.menu__nav ul {
+  float: left;
+  margin-right: 20px;
+}
+.menu__nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.menu__nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
   text-decoration: none;
 }
-
-.menu__navegacion__abajo_ul {
-  width: 100%;
-  height: 60px;
+.menu__nav i {
+  display: none;
 }
 
-.menu__navegacion__abajo_ul-li {
-  color: black;
-  text-align: center;
-  display: inline-block;
-  margin: 15px;
-  font-size: 30px;
+.nav__login {
+  margin-left: 0px;
 }
 
-.menu__navegacion__abajo_ul-li2 {
-  color: black;
-  text-align: center;
-  display: inline-block;
-  margin: 15px;
-  margin-left: 460px;
-  font-size: 30px;
+li a.active, li a:hover {
+  background-color: #ff69b4;
+  transition: 0.5s;
 }
 
-.menu__navegacion__abajo_ul-li3 {
-  color: black;
-  text-align: center;
-  display: inline-block;
-  margin: 15px;
-  font-size: 30px;
-}
-
-.menu__navegacion__abajo_ul-input {
-  color: black;
-  margin-top: 18px;
-  margin-bottom: 15px;
+#buscador {
+  margin-right: 200px;
   border-radius: 0.5rem;
-  width: 200px;
 }
 
-.menu__navegacion__abajo_ul-input:hover {
-  font-size: medium;
+.checkbtn i {
+  font-size: 30px;
+  float: left;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
 
+#check {
+  display: none;
+}
+
+.fa-cart-shopping {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .menu__nav ul li a {
+    font-size: 16px;
+  }
+  .nav__login {
+    margin-left: 0;
+  }
+  #buscador {
+    width: 150px;
+    margin: 0px;
+  }
+  .menu__nav ul li a {
+    padding: 7px 3px;
+  }
+}
+@media (max-width: 858px) {
+  .menu__nav i {
+    display: block;
+  }
+  .checkbtn {
+    display: block;
+  }
+  .fa-cart-shopping {
+    font-size: 30px;
+    float: right;
+    color: black;
+    margin-right: 40px;
+    margin-top: 27px;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #bd13ec;
+    top: 220px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .menu__nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .menu__nav ul li a {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+  #buscador {
+    margin-right: 30px;
+    width: 200px;
+  }
+  li a:hover, li a.active {
+    background-color: none;
+    color: red;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
 .main {
   background-color: #ffffff;
   width: 100%;
@@ -151,7 +219,7 @@ a {
   display: inline-block;
   width: 18%;
   background-color: white;
-  margin: 20px 80px 20px 150px;
+  margin: 20px 80px 20px 100px;
   height: 400px;
   padding: 5px;
   border: solid 1px rgb(190, 189, 189);
@@ -163,10 +231,9 @@ a {
   display: inline-block;
   width: 18%;
   background-color: white;
-  margin: 20px 53px 20px 150px;
   height: 400px;
   padding: 5px;
-  border: solid 3px black;
+  border: solid 1px black;
   overflow: hidden;
 }
 
@@ -193,7 +260,7 @@ a {
 }
 
 .aside {
-  background-image: linear-gradient(#e64c9b, #ac3eca);
+  background-image: linear-gradient(#e44f9c, #ff69b4);
   width: 14%;
   height: 99%;
   transform: skewY(5deg);
@@ -204,6 +271,13 @@ a {
   text-align: center;
   margin-top: 500px;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.aside__conteiner a i {
+  font-size: 60px;
+  color: white;
+  margin: 10px 0px;
 }
 
 .aside__conteiner h3 {
@@ -228,22 +302,25 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.footer__contenedor__all .footer__contenedor-all h3 {
+.footer__contenedor__all h3 {
   margin-bottom: 0.5rem;
   font-size: 25px;
-  color: white;
+  color: #000000;
 }
-.footer__contenedor__all .footer__contenedor-all h3 .footer-menu p {
+.footer__contenedor__all nav p {
   display: block;
   font-size: 20px;
   margin: 10px;
 }
-.footer__contenedor__all .footer__contenedor-all h3 .footer-menu a {
+.footer__contenedor__all nav a {
   display: block;
   font-size: 20px;
   margin: 10px;
   color: #000000;
   text-decoration: none;
+}
+.footer__contenedor__all nav a i {
+  color: #ffffff;
 }
 
 .menu__abajo__responsive__ul {
@@ -306,55 +383,6 @@ a {
     margin-left: 0px;
     margin-top: 0px;
   }
-  .menu__navegacion__abajo_ul-li {
-    display: none;
-  }
-  .menu__navegacion__abajo_ul-li2 {
-    display: none;
-  }
-  .menu__navegacion__abajo_ul-li3 {
-    display: none;
-  }
-  .menu__navegacion__abajo_ul-input {
-    display: none;
-  }
-  .menu__navegacion__abajo {
-    grid-area: menu__abajo;
-    width: 100%;
-    height: 60px;
-  }
-  .menu__navegacion__abajo_ul {
-    display: none;
-  }
-  .menu__abajo__responsive__ul {
-    display: block;
-    width: 100%;
-    padding: 2px 10px;
-  }
-  .nav__responsive-buttom {
-    display: block;
-    font-size: 40px;
-    margin: 5px;
-    width: 80%;
-  }
-  .carrito__responsive {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 35px;
-    width: 50px;
-    float: right;
-  }
-  .carrito__responsive a {
-    color: #000000;
-  }
-  .nav__responsive-buttom li {
-    float: left;
-  }
-  .nav__responsive__conteiner {
-    display: none;
-    position: absolute;
-    min-width: 150px;
-  }
   .main {
     display: block;
     height: calc(190vh - 200px);
@@ -398,7 +426,7 @@ a {
     display: block;
     margin-left: 80px;
   }
-  .footer__contenedor-all h3 {
+  .footer__contenedor__all h3 {
     font-size: 25px;
   }
   .footer-menu a {
@@ -532,6 +560,16 @@ a {
   background-image: linear-gradient(#e64c9b, #ac3eca);
   width: 14%;
   height: 100%;
+  margin-top: 15px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aside__register a i {
+  font-size: 60px;
+  color: white;
+  margin: 10px 50px;
 }
 
 .aside__conteiner-register {
@@ -684,7 +722,7 @@ a {
 
 .aside__conteiner-login {
   text-align: center;
-  margin-top: 180px;
+  margin-top: 100px;
 }
 
 .contenedor__registrarse__responsive {
@@ -971,37 +1009,33 @@ a {
 }
 /*Productos*/
 .main__productos {
-  background-color: #db3030;
+  background-color: #ffffff;
   width: 100%;
   height: calc(180vh - 200px);
   border-top: 50px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-areas:
-  "menu__productos section__productos section__productos section__productos section__productos aside__productos";
-
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
 }
 
-.menu__productos {
-  grid-area: menu__productos;
-  background-color: #ace411;
-  width: 250px;
-  height: 700px;
+.nav__productos {
+  background-color: #fff;
+  width: 18%;
+  height: 100%;
 }
 
 .section__productos {
-  grid-area: section__productos;
-  background-color: #ffffff;
-  width: 1400px;
+  background-color: rgba(250, 225, 250, 0.658);
+  width: 68%;
   height: 100%;
-  margin-right: 5px;
+  margin: 0px 10px;
 }
 
-.card__producto{
+.conteiner__card-productos {
   display: inline-block;
-  width: 300px;
-  background-color: rgb(255, 255, 255);
-  margin: 10px 40px 10px 90px;
+  width: 18%;
+  background-color: white;
+  margin: 20px 70px 20px 90px;
   height: 400px;
   padding: 5px;
   border: solid 1px rgb(190, 189, 189);
@@ -1009,34 +1043,22 @@ a {
   border-radius: 0.5rem;
 }
 
+.conteiner__card-productos-none {
+  display: inline-block;
+  width: 18%;
+  background-color: white;
+  margin: 20px 70px 20px 90px;
+  height: 400px;
+  padding: 5px;
+  border: solid 1px rgb(190, 189, 189);
+  overflow: auto;
+  border-radius: 0.5rem;
+}
 
 .aside__productos {
-  grid-area: aside__productos;
-  background-image: linear-gradient(#e64c9b, #ac3eca);
-  width: 130px;
+  background-image: linear-gradient(#e44f9c, #ff69b4);
+  width: 12%;
   height: 100%;
-}
-
-.conteiner__productos {
-  display: inline;
-}
-
-.menu__nav__ul__li {
-  width: 90%;
-  height: 70px;
-  background: #000000;
-  color: #ffffff;
-  margin: 5px;
-  border: 1px solid #ffffff;
-  font-size: 30px;
-  padding: 15px;
-}
-
-.titulo__menu__productos {
-  padding: 40px 10px;
-  margin: 5px;
-  font-size: 33px;
-  font-family: "Alfa Slab One", cursive;
 }
 
 .footer__productos {
@@ -1085,11 +1107,52 @@ a {
   margin: 10px;
 }
 
+/*Productos reponsive*/
+@media only screen and (max-width: 400px) {
+  .nav__productos {
+    display: none;
+  }
+  .aside__productos {
+    display: none;
+  }
+  .conteiner__card-productos-none {
+    display: none;
+  }
+  .section__productos {
+    width: 100%;
+    height: calc(180vh - 200px);
+    display: block;
+  }
+  .section__productos .conteiner__card-productos {
+    display: inline-block;
+    background-color: aliceblue;
+    margin: 10px 15px;
+    height: 320px;
+    width: 150px;
+    padding: 5px;
+    border: solid 1px rgb(190, 189, 189);
+    overflow: auto;
+  }
+  .section__productos .card__img {
+    width: 100%;
+    height: 150px;
+  }
+  .section__productos .card__desciption {
+    font-size: 17px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .section__productos .titulosDeImg {
+    font-size: 35px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
 /*Nosostros*/
 .main__nosotros {
   background-color: #ffffff;
   width: 100%;
-  height: calc(130vh - 550px);
+  height: calc(170vh - 550px);
   display: flex;
   border-top: 50px;
   margin-top: 50px;
@@ -1105,7 +1168,7 @@ a {
 .section__nosotros {
   width: 84%;
   height: 100%;
-  grid-template-areas: "QuienesSomos QuienesSomos" "ComoTrabajamos ComoTrabajamos";
+  grid-template-areas: "QuienesSomos QuienesSomos" "ComoTrabajamos ComoTrabajamos" "preguntasFrecuentes preguntasFrecuentes";
 }
 
 .QuienesSomos {
@@ -1122,7 +1185,7 @@ a {
   grid-area: ComoTrabajamos;
   background-color: #FFFFFF;
   width: 800px;
-  height: 150px;
+  height: 250px;
   margin: 10px;
   margin-left: 380px;
 }
@@ -1134,14 +1197,25 @@ a {
   height: 100px;
   margin: 10px;
   margin-top: 60px;
-  margin-left: 360px;
+  margin-left: 300px;
   margin-bottom: 50px;
+  padding: 10px;
 }
 
 .aside__nosotros {
   background-image: linear-gradient(#e64c9b, #ac3eca);
   width: 14%;
-  height: 100%;
+  height: 99%;
+  margin-top: 15px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aside__nosotros a i {
+  font-size: 60px;
+  color: white;
+  margin: 10px 50px;
 }
 
 .QuienesSomos h2 {
@@ -1227,97 +1301,9 @@ a {
     margin-left: 10px;
   }
 }
-/* prueba
-.body{
-    background-color: #e6e6e6;
-}
-
-header{
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
-
-nav{
-    background-color:#528fd5;
-    margin-top: 20px;
-    position: relative;
-}
-
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-nav > ul >li {
-    float: left;
-
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding: 10px 20px;
-
-}
-nav ul li a:hover {
-    background-color: #3669a3;
-    color: #fff;
-
-}
-
-nav > ul > li:hover div {
-    display: table;
-
-}
-
-submenu
-
-nav ul li div{
-    width: 1000px;
-    position: absolute;
-    left: 0;
-    background-color: #ccc;
-    box-sizing: border-box;
-    display: none;
-
-}
-nav ul li div ul{
-    width: 20%;
-    display: table-cell;
-    border-right: 1px solid rgba(255,255,555.5);
-    box-sizing: border-box;
-
-}
-
-nav ul li div ul:last-child{
-    border: none;
-}
-nav ul li div ul .titulo-1 {
-    background-color: #000000;
-    color: white;
-}
-nav ul li div ul .titulo-1 a{
-    color: white;
-    padding: 10px 20px;
-}
-.titulo-1.azul{background-color: #3498db;}
-.titulo-1.verde{background: #27ae60;}
-.titulo-1.naranja{background: orange;}
-.titulo-1.rojo{background: red;}
-
-nav ul li div ul .titulo-1 a:hover{
-    background: none;
-}
-
-nav ul li div ul li a {
-    color: #000000;
-}
-
-nav ul li div ul li a:hover{
-    color: white;
-}
-*//*# sourceMappingURL=styles-scss.css.map */
+/* prueba*/
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}/*# sourceMappingURL=styles-scss.css.map */

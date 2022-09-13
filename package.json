@@ -4,7 +4,7 @@
   "description": "estoy es un proyecto para un cotillon",
   "main": "index.html",
   "scripts": {
-    "build-css":"node-sass --include-path scss styles/scss/styles-scss.scss styles/styl.css",
+    "build-css":"node-sass --include-path scss styles/styles-scss.scss styles/styles-scss.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
